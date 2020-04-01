@@ -1,0 +1,27 @@
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+    .card > img {
+        height: 14rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    .card > img {
+        height: 12rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .card > img {
+        height: 14rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .card > img {
+        height: 16rem;
+    }
+}
