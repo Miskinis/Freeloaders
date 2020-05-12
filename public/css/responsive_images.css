@@ -22,6 +22,6 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .card > img {
-        height: 16rem;
+        height: 15rem;
     }
 }

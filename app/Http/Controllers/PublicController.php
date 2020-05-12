@@ -6,6 +6,7 @@ use Freeloaders\Category;
 use Freeloaders\Post;
 use Freeloaders\Subcategory;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class PublicController extends Controller
@@ -16,6 +17,25 @@ class PublicController extends Controller
     public function showCategories()
     {
         return view('categories');
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function showSearchPosts(Request $request)
+    {
+        // validate the data
+        $this->validate($request, array(
+            'searchValue' => 'required|max:255'
+        ));
+
+        $searchValue = $request->searchValue;
+
+        $posts = Post::where("title", 'LIKE', "%{$searchValue}%")->orderBy("id")->get();
+        return view('search', compact(['posts', 'searchValue']));
     }
 
     /**

@@ -20,11 +20,11 @@
             </ul>
 
             <div class="d-sm-none">
-                <form class="form-inline my-2 my-lg-0">
+                <form id="search-form-small" class="form-inline my-2 my-lg-0" action="{{ route('search') }}" method="POST" role="search">
+                    @csrf
                     <div class="input-group">
-                        <label class="sr-only" for="inlineFormInputName2">{{__('Search')}}</label>
-                        <input id="SearchFormInput" class="form-control" type="search" placeholder="Search"
-                               aria-label="Search">
+                        <label class="sr-only" for="searchFormInputSmall">{{__('Search')}}</label>
+                        <input id="searchFormInputSmall" class="form-control" type="search" placeholder="Search" aria-label="Search">
                         <div class="input-group-append">
                             <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
                         </div>
@@ -48,10 +48,8 @@
                         </li>
                     @endif
                 @else
-
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
@@ -61,9 +59,7 @@
                             <!--Divider-->
                             <hr class="my-0 mx-2">
 
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     $('#logout-form').submit();">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); $('#logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -79,10 +75,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-block">
     <div class="container-fluid">
-        <form class="form-inline my-2 my-lg-0">
+        <form id="search-form" class="form-inline my-2 my-lg-0" action="{{ route('search') }}" method="POST" role="search">
+            @csrf
             <div class="input-group">
-                <label class="sr-only" for="inlineFormInputName2">Search</label>
-                <input id="SearchFormInput" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <label class="sr-only" for="searchFormInput">Search</label>
+                <input id="searchFormInput" name="searchValue" class="form-control" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
                 </div>

@@ -1,10 +1,18 @@
 {
-    "name": "laravel/laravel",
+    "name": "vdu/freeloaders",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Freelancer hiring and posting platform.",
     "keywords": [
-        "framework",
-        "laravel"
+        "Freeloaders",
+        "freelancers",
+        "seasonal jobs"
+    ],
+    "authors": [
+        {
+            "name": "Eimantas Klimavicius",
+            "email": "eimantas.klimavicius@vdu.lt",
+            "role": "Fullstack Developer"
+        }
     ],
     "license": "MIT",
     "require": {
@@ -17,6 +25,7 @@
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.1",
         "mews/purifier": "^3.2",
+        "orangehill/iseed": "^2.6",
         "yajra/laravel-datatables-oracle": "^9.9"
     },
     "require-dev": {

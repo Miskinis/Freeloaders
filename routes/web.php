@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PublicController@showCategories')->name('categories');
+Route::post('/', 'PublicController@showSearchPosts')->name('search');
 
 Route::prefix('subcategories')->group(function() {
     Route::get('/{category}', 'PublicController@showSubcategories')->name('categories.subcategories');
@@ -32,5 +33,5 @@ Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@index')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::resource('/dashboard/subcategories', 'SubcategoryController');
-    Route::get('/dashboard/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
 });
