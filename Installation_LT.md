@@ -21,11 +21,12 @@
 ### Duomenų bazės paleidimo instrukcijos
 
 1. Serveryje sukurti tuščia „mysql“ duomenų bazę pavadinimu „freeloaders“.
-	- Naudoti prisijungimo duomenis
+	- Numatytosios prisijungimo konfiguracijos
 		- Vardas: „root”
 		- Slaptažodis: „root“
 		- IP adresas: 127.0.0.1
 		- Portas: 3306
+	- Jei reikia pakeisti prisijungimo konfiguracijas, sukurkite naują failą .env naudojant .env.emaple kaip pavizdį ir konfiguruokite savo nuožiūra.
 2. Į „Jetbrain PhpStorm“ ar kitą terminalą įrašyti komandą „php artisan migrate:fresh --seed“.
 
 ### Svetainės paleidimas
