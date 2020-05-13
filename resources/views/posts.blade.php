@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     @empty
-                        <h1 class="mx-3">No posts found for subcategory: {{$subcategory->title}}</h1>
+                        <h1 class="pb-5">No posts found for subcategory: {{$subcategory->title}}</h1>
                     @endforelse
                 </div>
             </div>

@@ -24,7 +24,7 @@
                     @csrf
                     <div class="input-group">
                         <label class="sr-only" for="searchFormInputSmall">{{__('Search')}}</label>
-                        <input id="searchFormInputSmall" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <input id="searchFormInputSmall" name="searchValue" class="form-control" type="search" placeholder="Search" aria-label="Search">
                         <div class="input-group-append">
                             <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
                         </div>

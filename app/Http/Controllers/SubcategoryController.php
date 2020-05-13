@@ -125,14 +125,18 @@ class SubcategoryController extends Controller
 
         $this->validate($request, array(
             'title'        => 'required|max:255',
-            'category_id'  => 'required|integer',
-            'featured_img' => 'image',
+            'category_id'  => 'required|integer'
         ));
 
         $subcategory->title = $request->title;
         $subcategory->subcategory_id = $request->category_id;
 
-        if ($request->hasFile('featured_img')) {
+        if ($request->hasFile('featured_img'))
+        {
+            $this->validate($request, array(
+                'featured_img' => 'image'
+            ));
+
             $image = $request->file('featured_img');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/' . $filename);

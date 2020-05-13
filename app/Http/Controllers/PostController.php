@@ -29,7 +29,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('id', \Auth::id())->orderBy('id', 'desc')->paginate(10);
+        $posts = Post::where('user_id', \Auth::id())->orderBy('id', 'desc')->paginate(10);
         return view('posts.index', compact('posts'));
     }
 
@@ -58,7 +58,7 @@ class PostController extends Controller
             'title'          => 'required|max:255',
             'subcategory_id' => 'required|integer',
             'featured_img'   => 'required|image',
-            'content'        => 'required'
+            'body'           => 'required'
         ));
 
         // store in the database
@@ -67,7 +67,7 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->user_id = Auth::id();
         $post->subcategory_id = $request->subcategory_id;
-        $post->content = Purifier::clean($request->content);
+        $post->body = Purifier::clean($request->body);
 
         if ($request->hasFile('featured_img')) {
             $image = $request->file('featured_img');
@@ -127,19 +127,25 @@ class PostController extends Controller
         // Validate the data
         $post = Post::find($id);
 
+        // validate the data
         $this->validate($request, array(
             'title'          => 'required|max:255',
             'subcategory_id' => 'required|integer',
-            'content'        => 'required',
-            'featured_img'   => 'image',
+            'body'           => 'required'
         ));
 
         $post->title = $request->title;
         $post->user_id = Auth::id();
         $post->subcategory_id = $request->subcategory_id;
-        $post->content = Purifier::clean($request->content);
+        $post->body = Purifier::clean($request->body);
 
-        if ($request->hasFile('featured_img')) {
+        if ($request->hasFile('featured_img'))
+        {
+            // validate image
+            $this->validate($request, array(
+                'featured_img'   => 'image'
+            ));
+
             $image = $request->file('featured_img');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/' . $filename);

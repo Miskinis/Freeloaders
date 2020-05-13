@@ -23,7 +23,7 @@
                         <a href="{{route('categories.subcategories', [$category->id])}}" class="stretched-link"></a>
                     </div>
                 @empty
-                    <h1>No categories found in database</h1>
+                    <h1 class="pb-5">No categories found in database</h1>
                 @endforelse
             </div>
         </div>

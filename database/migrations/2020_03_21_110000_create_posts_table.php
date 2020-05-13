@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->foreignId('subcategory_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->string('featured_img');
-            $table->text('content');
+            $table->text('body');
             $table->timestamps();
         });
     }

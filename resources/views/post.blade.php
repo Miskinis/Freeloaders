@@ -11,11 +11,11 @@
         <div class="row">
             <nav class="d-none d-lg-block col-lg-2 navbar navbar-light bg-light px-2 border-right">
                 <ul class="navbar-nav mx-2">
-                    @foreach($subcategory->posts as $post)
+                    @foreach($subcategory->posts as $nav_post)
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="{{route('posts.post', [$category->id, $subcategory->id, $post->id])}}">
-                                {{ $post->title }}</a>
+                               href="{{route('posts.post', [$category->id, $subcategory->id, $nav_post->id])}}">
+                                {{ $nav_post->title }}</a>
                         </li>
                     @endforeach
                 </ul>
@@ -23,7 +23,10 @@
 
             <div class="col-lg-10 col-md-12 my-2">
                 <h1>{{ $post->title }}</h1>
-                <p class="lead">{!! $post->content !!}</p>
+                <hr class="m-2">
+                <h5>Offer by <p class="font-weight-bold d-inline">{{Freeloaders\User::find(Auth::id())->name}}</p></h5>
+                <hr class="m-2">
+                <p class="lead">{!! $post->body !!}</p>
             </div>
         </div>
     </div>

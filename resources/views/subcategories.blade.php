@@ -39,8 +39,7 @@
                             </div>
                         </div>
                     @empty
-                        <h1 class="font-weight-bold text-capitalize pb-5">{{$category->name}}</h1>
-                        <h1>No subcategories found for category: {{$category->name}}</h1>
+                        <h1 class="pb-5">No subcategories found for category: {{$category->name}}</h1>
                     @endforelse
                 </div>
             </div>

@@ -26,7 +26,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-md-offset-2">
+            <div class="col-md-12 col-md-offset-2 p-2">
                 <h1>Edit Post</h1>
 
                 <hr>
@@ -52,8 +52,8 @@
                 {{ Form::label('featured_img', 'Upload a Featured Image') }}
                 {{ Form::file('featured_img') }}
                 <hr>
-                {{ Form::label('content', "Content:", ['class' => 'form-spacing-top']) }}
-                {{ Form::textarea('content', null, ['class' => 'form-control']) }}
+                {{ Form::label('body', "Content:", ['class' => 'form-spacing-top']) }}
+                {{ Form::textarea('body', null, ['class' => 'form-control']) }}
                 <hr>
 
                 <div class="col-md-4">
