@@ -35,6 +35,13 @@
 	- Jei reikia pakeisti prisijungimo konfiguracijas, sukurkite naują failą .env naudojant .env.emaple kaip pavizdį ir konfiguruokite savo nuožiūra.
 2. Į „Jetbrain PhpStorm“ ar kitą terminalą įrašyti komandą „php artisan migrate:fresh --seed“.
 
+- Numatytieji vartotojai (/login):
+    - eima@user.com ; Eima123456
+    - lina@user.com ; Lina123456
+- Numatytieji administratoriai (/admin/login):
+    - eima@admin.com ; Eima123456
+    - lina@admin.com ; Lina123456
+    
 ### Svetainės paleidimas
 
 - Sukonfiguruoti prisijungimą

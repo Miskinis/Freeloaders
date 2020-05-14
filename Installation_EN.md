@@ -35,6 +35,13 @@
 	- If needed add an .env file based of .env.example to override default configurations.
 2. Use "Jetbrain PhpStorm" or other terminal to execute the following command „php artisan migrate:fresh --seed“ to create and populate data tables.
 
+- Default Users included (/login):
+    - eima@user.com ; Eima123456
+    - lina@user.com ; Lina123456
+- Default Admins included (/admin/login):
+    - eima@admin.com ; Eima123456
+    - lina@admin.com ; Lina123456
+
 ### Running the website
 
 - Set connection
