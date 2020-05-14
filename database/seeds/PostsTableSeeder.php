@@ -12,12 +12,12 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('Posts')->delete();
-        
+
         \DB::table('Posts')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'user_id' => 1,
@@ -57,10 +57,10 @@ class PostsTableSeeder extends Seeder
                 'created_at' => '2020-05-08 20:44:35',
                 'updated_at' => '2020-05-13 18:13:20',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
-                'user_id' => 1,
+                'user_id' => 2,
                 'subcategory_id' => 1,
                 'title' => 'I will design develop professional android app for passive income',
                 'featured_img' => '1589383039.png',
@@ -68,7 +68,7 @@ class PostsTableSeeder extends Seeder
                 'created_at' => '2020-05-13 18:17:19',
                 'updated_at' => '2020-05-13 18:17:19',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'user_id' => 1,
@@ -81,7 +81,7 @@ class PostsTableSeeder extends Seeder
                 'created_at' => '2020-05-13 21:12:06',
                 'updated_at' => '2020-05-13 21:12:21',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'user_id' => 1,
@@ -118,10 +118,10 @@ class PostsTableSeeder extends Seeder
                 'created_at' => '2020-05-13 21:16:00',
                 'updated_at' => '2020-05-13 21:16:00',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
-                'user_id' => 1,
+                'user_id' => 2,
                 'subcategory_id' => 1,
                 'title' => 'I will develop an android app or will be your android app developer',
                 'featured_img' => '1589394658.webp',
@@ -153,7 +153,7 @@ class PostsTableSeeder extends Seeder
                 'created_at' => '2020-05-13 21:30:58',
                 'updated_at' => '2020-05-13 21:30:58',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'user_id' => 1,
@@ -165,7 +165,7 @@ class PostsTableSeeder extends Seeder
                 'updated_at' => '2020-05-13 21:32:01',
             ),
         ));
-        
-        
+
+
     }
 }

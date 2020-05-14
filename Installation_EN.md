@@ -1,5 +1,11 @@
 # Installation instructions
 
+### Projekto Reikalavimai kompiuteriui
+
+- Install "Npm"
+- Install "composer"
+- Install "Jetbrain PhpStorm" or other IDE
+
 ### PHP requirements
 
 - PHP version >= 7.2.5
@@ -31,4 +37,9 @@
 
 ### Running the website
 
+- Set connection
+    - Set Project root directory "freeloaders\public"
+    - Set to use a router script "freeloaders\server.php"
+    - Set Port "8000"
+    - Set custom working directory "freeloaders\public"
 - Use "Jetbrain PhpStorm" or other terminal to execute the following command „php artisan serve“ to run the server.

@@ -1,5 +1,11 @@
 # Įrašymo instrukcija
 
+### Projekto Reikalavimai kompiuteriui
+
+- Įrašyti "Npm"
+- Įrašyti "composer"
+- Įrašyti "Jetbrain PhpStorm" ar kitą IDE
+
 ### Serverio PHP reikalavimai
 
 - PHP versija >= 7.2.5
@@ -31,4 +37,9 @@
 
 ### Svetainės paleidimas
 
+- Sukonfiguruoti prisijungimą
+    - Nustatyti projekto root direktorija "freeloaders\public"
+    - Nustatyti maršrutizavimo instrukcijų failą "freeloaders\server.php"
+    - Nustatyti portą "8000"
+    - Nustatyti darbinę direktorija "freeloaders\public"
 - Į „Jetbrain PhpStorm“ ar kitą terminalą įrašyti komandą „php artisan serve“.

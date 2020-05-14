@@ -24,7 +24,7 @@
             <div class="col-lg-10 col-md-12 my-2">
                 <h1>{{ $post->title }}</h1>
                 <hr class="m-2">
-                <h5>Offer by <p class="font-weight-bold d-inline">{{Freeloaders\User::find(Auth::id())->name}}</p></h5>
+                <h5>Offer by <p class="font-weight-bold d-inline">{{Freeloaders\User::find($post->user_id)->name}}</p></h5>
                 <hr class="m-2">
                 <p class="lead">{!! $post->body !!}</p>
             </div>
