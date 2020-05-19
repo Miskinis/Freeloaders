@@ -11,6 +11,6 @@ It's a responsive website for reading and posting offers from freelancers, made 
 - intervention/image
 
 ### Useful Links:
-- [Installation documentation](https://github.com/Miskinis/Freeloaders/blob/master/Installation_EN.md)
+- [Installation documentation](Installation_EN.md)
 
 
