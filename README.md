@@ -1,4 +1,4 @@
-#Freeloaders
+# Freeloaders
 
 It's a responsive website for reading and posting offers from freelancers, made as an educational project for "Vytauto Didžojo Universitetas" a.k.a VDU.
 
