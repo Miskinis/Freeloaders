@@ -11,6 +11,7 @@ It's a responsive website for reading and posting offers from freelancers, made 
 - intervention/image
 
 ### Useful Links:
-- [Installation documentation](Installation_EN.md)
+- [Project Documentation](documentation/Documentation.md)
+- [Installation Documentation](documentation/Installation_EN.md)
 
 
